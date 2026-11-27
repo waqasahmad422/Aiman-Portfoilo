@@ -23,7 +23,7 @@ export default function Contact() {
   )
   const social = [[Linkedin, 'LinkedIn', profile.socials.linkedin], [Instagram, 'Instagram', profile.socials.instagram], [Facebook, 'Facebook', profile.socials.facebook], [Palette, 'Behance', profile.socials.behance]]
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section pt-32 md:pt-40">
       <Reveal className="mb-12">
         <h2 className="max-w-3xl font-display text-6xl leading-[.95] tracking-wide sm:text-8xl">LET'S CREATE SOMETHING AMAZING!</h2>
         <p className="mt-5 max-w-xl font-light text-white/85">Designing ideas into reality — tell me about your project and I'll get back to you.</p>

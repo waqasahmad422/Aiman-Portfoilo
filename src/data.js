@@ -9,10 +9,7 @@ export const profile = {
   socials: { linkedin: '#', instagram: '#', facebook: '#', behance: '#' },
 }
 
-export const nav = [
-  ['home', 'Home'], ['about', 'About'], ['skills', 'Skills'], ['education', 'Education'],
-  ['services', 'Services'], ['more', 'Languages'], ['work', 'Work'], ['contact', 'Contact'],
-]
+export const nav = [['/', 'Home'], ['/about', 'About'], ['/services', 'Services'], ['/portfolio', 'Portfolio'], ['/contact', 'Contact']]
 
 export const education = [
   { year: '2020', title: 'Matriculation — SSC', place: 'GGHS Ocha Wala Shabqadar', note: 'Marks: 889 / 1100 (80.8%)' },
@@ -66,3 +63,6 @@ export const projects = [
 ].map(([f, title, category]) => ({ src: img(f + '.jpg'), title, category }))
 
 export { img }
+
+export const featured = ['post-bcl-hiring.jpg', 'logo-shah.jpg', 'other-look.jpg', 'print-stationery.jpg', 'post-travel.jpg', 'web-monitor.jpg']
+  .map((f) => projects.find((p) => p.src.endsWith(f)))

@@ -18,12 +18,7 @@ export default function Gallery() {
   }, [open, list.length])
 
   return (
-    <section id="work" className="section">
-      <Reveal className="mb-10">
-        <h2 className="font-display text-6xl leading-none tracking-wide sm:text-8xl">SOCIAL MEDIA POST DESIGN</h2>
-        <span className="mt-4 block h-[3px] w-24 rounded bg-gradient-to-r from-white to-accent" />
-        <p className="mt-5 max-w-2xl font-light text-white/85">Recruitment posters, corporate and tech promotions, restaurant and travel ads, plus logos, print, web layouts and other work.</p>
-      </Reveal>
+    <section id="work" className="section !pt-4">
       <div className="mb-8 flex flex-wrap gap-3" role="tablist" aria-label="Project categories">
         {categories.map((c) => (
           <button key={c} role="tab" aria-selected={cat === c} onClick={() => setCat(c)}

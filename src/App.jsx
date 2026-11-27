@@ -1,24 +1,24 @@
+import { HashRouter, Routes, Route, Outlet } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import About from './components/About'
-import Skills from './components/Skills'
-import Education from './components/Education'
-import Services from './components/Services'
-import LangHobbies from './components/LangHobbies'
-import Gallery from './components/Gallery'
-import Contact from './components/Contact'
 import Footer from './components/Footer'
 import { Background } from './components/Shared'
+import { Home, AboutPage, ServicesPage, PortfolioPage, ContactPage } from './pages/Pages'
+
+const Layout = () => (<><Background /><Navbar /><main><Outlet /></main><Footer /></>)
 
 export default function App() {
   return (
-    <>
-      <Background />
-      <Navbar />
-      <main>
-        <Hero /><About /><Skills /><Education /><Services /><LangHobbies /><Gallery /><Contact />
-      </main>
-      <Footer />
-    </>
+    <HashRouter>
+      <Routes>
+        <Route element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="services" element={<ServicesPage />} />
+          <Route path="portfolio" element={<PortfolioPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="*" element={<Home />} />
+        </Route>
+      </Routes>
+    </HashRouter>
   )
 }

@@ -1,5 +1,5 @@
 import { img } from '../data'
-import { Reveal, SectionTitle } from './Shared'
+import { Reveal } from './Shared'
 
 export default function About() {
   return (
@@ -15,7 +15,6 @@ export default function About() {
           </div>
         </Reveal>
         <div className="order-1 lg:order-2">
-          <SectionTitle file="h-about.png" text="About Me" className="lg:flex lg:flex-col lg:items-end" />
           <Reveal delay={150} className="flex justify-center lg:justify-end">
             <img src={img('camera.png')} alt="Pink digital camera framing a character illustration of Aiman" className="w-full max-w-md animate-float drop-shadow-[0_30px_40px_rgba(20,0,12,.55)]" />
           </Reveal>
